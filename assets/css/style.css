@@ -1,0 +1,51 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+
+:root{
+    --main-color: #00eeff;
+    --text-color:  #ffffff;
+    --bg-color-01: #1f242d; 
+    --bg-color-02: #3c537e;
+    --bg-color-03: #313846;
+    --color-00: #0000001a;
+    --color--01: #1805DB;
+    --color--02: rgb(223, 82, 82);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Istok Web", serif;
+    font-weight: 16px;
+    font-style: normal;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    color: var(--text-color);
+    
+}
+
+body{
+    background: linear-gradient(90deg, var(--bg-color-01), var(--bg-color-02));
+    
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem;
+    background-color:var(--bg-color-03);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100 ;
+    border: solid 1px var(--color-00);
+}
+
+
+  
