@@ -8,11 +8,12 @@
     --bg-color-02: #3c537e;
     --bg-color-03: #313846;
     --color-00: #0000001a;
-    --color--01: #1805DB;
-    --color--02: rgb(223, 82, 82);
+    --color-01: #1805DB;
+    --color-02: rgb(223, 82, 82);
 }
 
 * {
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -52,6 +53,13 @@ header {
     cursor: default;
 }
 
+ nav{
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    
+}
+
 nav a {
     font-size: 1.2rem;
     color: var(--text-color);
@@ -71,6 +79,7 @@ nav a:hover {
 section {
     min-height: 100vh;
     padding: 6rem 6rem 2rem;
+
 
 }
 
@@ -214,7 +223,7 @@ span {
 .btn:hover{
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     background-color: inherit;
-    color: var(--main-color);
+    color: var(--color--02);
     cursor: pointer;
 }
 
@@ -233,6 +242,7 @@ span {
     box-shadow:  0 8px 15px var(--bg-color-01);
     overflow: hidden;
     display: flex;
+    
 
 }
 
@@ -242,7 +252,8 @@ span {
 
 }
 
-.project-box img:hover{
+
+.project-box:hover img {
     transform: scale(1.1);
 }
 
@@ -250,17 +261,213 @@ span {
     position: absolute;
     bottom: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-    background-color: linear-gradient(transparent,var(--main-color));
+    background: linear-gradient(transparent,var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    transform: translateY(30rem);
+    transform: translateY(100rem);
     transition: 0.5s ease;
     padding: 0 4rem;
 
 }
+
+.project-box:hover .project-layer{
+    transform: translateY(0);
+}    
+
+.project-layer h4{
+    font-size: 1.8rem;
+
+}
+
+.project-layer p{
+    font-size: 1.2rem;
+    margin-top: 0.2rem 0 0.5rem;
+}
+.project-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.project-layer a i{
+    font-size: 1.2rem;
+    color: var(--bg-color-02);
+
+}
+
+.Contact {
+    background: linear-gradient(135deg, var(--bg-color-03), var(--bg-color-02));
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    align-content: space-evenly;
+    min-height: 100vh;
+    padding: 2rem;
+}
+.Contact:hover{
+    span{
+        color: var(--main-color);
+        transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+}
+
+.Contact:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 238, 255, 0.3) 30%, transparent 70%);
+    z-index: 0;
+    animation: pulse 8s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.Contact h2 {
+    font-size: 2.8rem;
+
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.Contact h2 span {
+    transition: filter 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    color: var(--text-color);
+}
+.Contact:hover h2  {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    >span{
+        filter: brightness(1.1);
+        color: var(--main-color);
+        font-weight: bold;
+        font-size: 3rem;
+    }
+
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-container h4 {
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.contact-container a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--bg-color-02);
+    color: var(--text-color);
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 2rem;
+}
+
+.contact-container a:hover {
+    transform: scale(1.1);
+    background-color: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: var(--bg-color-03);
+}
+
+.social-media {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media a {
+    position: relative;
+    font-size: 2rem;
+    color: var(--text-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.2);
+    color: var(--main-color);
+}
+
+/* Optional animated background effect on hover */
+.social-media a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,238,255,0.3) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-media a:hover::before {
+    opacity: 1;
+}
+
+.menu{
+    display: none;
+    cursor: pointer;
+
+}
+
+.bar1, .bar2, .bar3{
+    width: 2.5rem;
+    height: 0.3rem;
+    background-color: var(--text-color);
+    margin: 0.5rem 0;
+    transition: 0.5s ease;
+
+}
+
+.change .bar1{
+    transform: rotate(-45deg) translate(-0.5rem, 0.5rem);
+}
+.change .bar2{
+    opacity: 0;
+}
+.change .bar3{
+    transform: rotate(45deg) translate(-0.5rem, -0.5rem);
+}
+
