@@ -431,7 +431,6 @@ footer{
     color: var(--main-color);
 }
 
-/* Optional animated background effect on hover */
 .social-media a::before {
     content: "";
     position: absolute;
@@ -470,4 +469,122 @@ footer{
 .change .bar3{
     transform: rotate(45deg) translate(-0.5rem, -0.5rem);
 }
+
+.nav-responsive{
+    display: block;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+@media (min-width:0px) {
+    
+
+    .menu {
+        display: block;
+    }
+   nav{
+         display: none;
+
+   }
+
+   .home-img, .about-img{
+       width: 65%;
+       max-width: 65%;
+   }
+    
+
+   .service-container .service-box{
+       width: 80%;
+       
+   }
+
+
+section {
+    padding: 6rem 2rem;
+}
+
+.Home, .About{
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.home-img, .about-img{
+    
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.home-content div{
+    text-align: left;
+}
+
+
+
+.home-content h1, .about-content h1{
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.service-container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-box{
+    width: 100%;
+}
+}
+
+
+
+
+@media (min-width:768px) {
+
+    .Home, .About{
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+    
+    .home-img, .about-img{
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .menu {
+        display: none;
+    }
+    nav{
+        display: block;
+    }
+   .nav-responsive, .nav-responsive a{
+            display: none;
+   }
+
+   .service-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   }
+
+   .Home .About{
+       flex-direction: row;
+       justify-content: space-evenly;
+   }
+
+   .service-container .service-box{
+       width: 90%;
+     
+   } 
+   .project-container{
+
+    flex-direction: grid;
+    flex-wrap: wrap;
+    grid-template-columns: auto auto;
+   }  
+}
+
+
+
 
