@@ -10,4 +10,7 @@ function toggleMenu(){
     if (menuHamburguer.classList.contains('change')){
         nav.style.display = 'block'
     }
+    else{
+        nav.style.display = 'none';
+    }
 }

@@ -60,7 +60,7 @@ header {
     
 }
 
-nav a {
+nav a , .nav-responsive a{
     font-size: 1.2rem;
     color: var(--text-color);
     padding: 0.5rem 1rem;
@@ -70,11 +70,23 @@ nav a {
     border: solid 1px var(--color-00);
 }
 
-nav a:hover {
+nav a:hover, .nav-responsive a:hover{
     background-color: var(--color-00);
     color: var(--main-color);
     border-radius: 0.5rem;
 }
+
+.nav-responsive {
+    display: none;
+    position: absolute;
+    top: 91%;
+    left: 0;
+    width: 100%;
+    padding: 1rem ;
+    background-color: var(--bg-color-03);
+}
+
+
 
 section {
     min-height: 100vh;
@@ -487,6 +499,12 @@ footer{
 
    }
 
+   .nav-responsive a{
+    display: block;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+   }
+
    .home-img, .about-img{
        width: 65%;
        max-width: 65%;
@@ -537,9 +555,6 @@ section {
 }
 }
 
-
-
-
 @media (min-width:768px) {
 
     .Home, .About{
@@ -584,7 +599,5 @@ section {
     grid-template-columns: auto auto;
    }  
 }
-
-
 
 
