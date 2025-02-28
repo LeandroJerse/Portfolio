@@ -71,7 +71,7 @@ nav a:hover,
     left: 0;
     width: 100%;
     padding: 1rem;
-    background-color: var(--bg-color-03);
+    background-color:rgba(0, 0, 0, 0.3);
 }
 section {
     min-height: 100vh;
@@ -150,7 +150,7 @@ span {
 .service-box h3 {
     font-size: 1.6rem;
 }
-.service-box p {
+ .service-text {
     margin: 0.5rem;
     letter-spacing: 0.1rem;
     word-spacing: 0.3rem;
@@ -160,6 +160,12 @@ span {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.service-text.expanded {
+    display: block;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    -webkit-box-orient: initial;
 }
 .btn {
     display: inline-block;
@@ -566,3 +572,4 @@ footer {
     transition: 0.5s ease;
     padding: 0 4rem;
 }
+
